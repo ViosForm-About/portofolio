@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #000;
+  min-height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 30px;
+  width: 90%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  backdrop-filter: blur(12px);
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255,255,255,0.6);
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+.tech {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.spin {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 24px;
+  margin: 18px 0;
+}
+
+.social a {
+  color: white;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social a:hover {
+  transform: scale(1.3);
+  color: #00c6ff;
+}
+
+.pixel-rain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,255,0.15) 0px,
+    rgba(0,255,255,0.15) 2px,
+    transparent 4px,
+    transparent 8px
+  );
+  animation: rain 0.8s linear infinite;
+}
+
+@keyframes rain {
+  from { background-position-y: 0; }
+  to { background-position-y: 20px; }
+}
+
+.music-btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  background: #00c6ff;
+  color: black;
+  cursor: pointer;
+}
